@@ -9,12 +9,15 @@ df.sample(10)
 df.groupby('name').describe()
 
 # %%
+# Count the occurrences of each unique value in the 'name' column
 df['name'].value_counts()
 
 # %%
+# Pivot the data to visualize each metric over time
 pd.pivot(df, index='time', columns='name').plot(subplots=True)
 
 # %%
+# Identify bad CPU values based on a threshold
 df.query('name == "cpu" & (value < 0 | value > 100)')
 
 # %% 
