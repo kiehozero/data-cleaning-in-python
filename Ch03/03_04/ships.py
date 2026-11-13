@@ -4,10 +4,12 @@ import pandas as pd
 df = pd.read_csv('ships.csv')
 df
 # %%
-import pandera as pa
+import pandera.pandas as pa
 import numpy as np
 
 schema = pa.DataFrameSchema({
+    # using a pandera schema means you can validate the structure
+    # and constraints of your DataFrame
     'name': pa.Column(pa.String),
     'lat': pa.Column(
         pa.Float,

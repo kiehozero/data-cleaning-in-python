@@ -6,11 +6,12 @@ size = 5
 df = pd.DataFrame({
     'time': pd.date_range('2021', freq='17s', periods=size),
     'name': ['cpu'] * size,
-    'value': np.random.rand(size) * 40,
+    'value': np.random.rand(size) * 40
 })
 df
 
 # %%
+# allows for schema definition and validation of the DataFrame
 import pyarrow as pa
 
 schema = pa.schema([
