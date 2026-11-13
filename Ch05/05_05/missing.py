@@ -6,6 +6,7 @@ df = pd.read_csv('cart.csv', parse_dates=['date'])
 df
 
 # %% 
+# fill missing values in the 'amount' column with 1
 df['amount'].fillna(1, inplace=True)
 df
 
@@ -20,6 +21,7 @@ df
 
 # %%
 import numpy as np
+# calculate the mean price for each item to fill missing values
 prices = df.groupby('name')['price'].transform(np.mean)
 prices
 

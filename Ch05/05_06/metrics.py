@@ -6,6 +6,7 @@ df
 # %%
 
 df = pd.melt(
+    # reshape the DataFrame from wide to long format
     df,
     value_vars=['cpu', 'memory'],
     id_vars=['time'],
