@@ -7,7 +7,9 @@ df
 # %%
 import sqlite3
 
-
+# this query is deliberately designed to fail because of a non-null
+# constraint on the lat and lng columns, in the 04_06 files you'll
+# see how it is fixed
 schema = '''
 CREATE TABLE ships (
     name TEXT,
