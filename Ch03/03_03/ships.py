@@ -5,10 +5,12 @@ df = pd.read_csv('ships.csv')
 df
 
 # %%
+# return all rows with any missing values
 df[df.isnull().any(axis=1)]
 # %%
 df.iloc[-1]['name']
 # %%
+# strip whitespace 
 df['name'] = df['name'].str.strip()
 df.iloc[-1]['name']
 

@@ -15,4 +15,5 @@ mdf = pd.merge(df, max_heights, how='left')
 mdf
 
 # %%
+# find rows where the height exceeds the maximum allowed height for the grade
 df[mdf['height'] > mdf['max_height']]
